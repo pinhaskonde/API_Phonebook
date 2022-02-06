@@ -19,7 +19,7 @@ public class OkHttpGetAllContactsTest {
     public void getAllContactsTest() throws IOException {
         Request request = new Request.Builder()
                 .url("https://contacts-telran.herokuapp.com/api/contact")
-                .addHeader("Authorization","").build();
+                .addHeader("Authorization","eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InBpbmhhc0BnbWFpbC5jb20ifQ.fPovUT2VY3QbeyAhoYp9jEYSJaNxMd1hNTYcPj-8O30").build();
 
         Response response = client.newCall(request).execute();
         AuthResponseDTO responseDTO = new AuthResponseDTO();

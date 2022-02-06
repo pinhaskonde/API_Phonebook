@@ -31,6 +31,8 @@ public class OkHttpLoginTest {
 
         Response response = client.newCall(request).execute();
 
+        String responseJson = response.body().string();
+//        System.out.println("responseJson: "+responseJson);
         Assert.assertTrue(response.isSuccessful());
     }
 
