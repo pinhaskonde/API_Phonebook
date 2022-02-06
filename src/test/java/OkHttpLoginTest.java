@@ -1,6 +1,5 @@
 import com.google.gson.Gson;
 import dto.AuthRequestDTO;
-import dto.AuthResponseDTO;
 import dto.ErrorDTO;
 import okhttp3.*;
 import org.testng.Assert;
@@ -35,19 +34,6 @@ public class OkHttpLoginTest {
 //        System.out.println("responseJson: "+responseJson);
         Assert.assertTrue(response.isSuccessful());
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     @Test
@@ -110,10 +96,6 @@ public class OkHttpLoginTest {
 
         Assert.assertEquals(errorDTO.getCode(), 401);
     }
-
-
-
-
 
 
 }
