@@ -1,9 +1,7 @@
 import com.google.gson.Gson;
 import dto.ContactDTO;
-import dto.GetAllContactsDTO;
 import okhttp3.*;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.IOException;

@@ -71,7 +71,7 @@ public class RestAssuredTests {
                 .lastName("Kohchen")
                 .email("aharon@gmail.com")
                 .phone("333000555")
-                .address("Eliahu str.")
+                .address("Rotshild str.")
                 .description("one more description")
                 .build();
 
@@ -83,7 +83,7 @@ public class RestAssuredTests {
                 .then()
                 .assertThat().statusCode(200)
                 .extract().path("id");
-        System.out.println("Id: " + id);
+        System.out.println("Contact Id: " + id);
 
     }
 
@@ -98,6 +98,7 @@ public class RestAssuredTests {
         System.out.println("Status: " + status);
 
     }
+
 
 
 }

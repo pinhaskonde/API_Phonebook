@@ -27,6 +27,7 @@ public class OkHttpAddContactTest {
                 .address("asdfgg")
                 .description("123 description")
                 .build();
+        
         RequestBody requestBody = RequestBody.create(gson.toJson(contactDTO), JSON);
         Request request = new Request.Builder()
                 .url("https://contacts-telran.herokuapp.com/api/contact")
