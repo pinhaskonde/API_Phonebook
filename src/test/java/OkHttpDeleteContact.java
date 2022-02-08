@@ -38,10 +38,10 @@ public class OkHttpDeleteContact {
 
         ContactDTO contact = gson.fromJson(response.body().string(), ContactDTO.class);
 
-//        System.out.println("Contact created: " + contact.getName());
+        System.out.println("Contact created: " + contact.getName());
 
         int id = contact.getId();
-        RequestBody requestBodyId = RequestBody.create(gson.toJson(contactDTO), JSON);
+//        RequestBody requestBodyId = RequestBody.create(gson.toJson(contactDTO), JSON);
         Request requestId = new Request.Builder()
                 .url("https://contacts-telran.herokuapp.com/api/contact/" + id)
                 .delete(requestBody)
@@ -49,7 +49,7 @@ public class OkHttpDeleteContact {
                 .build();
 
         Response responseDel = client.newCall(requestId).execute();
-//        System.out.println("Contact: "+ contact.getName()+" - was deleted");
+        System.out.println("Contact: "+ contact.getName()+" - was deleted");
 
         Assert.assertEquals(responseDel.code(), 200);
     }
